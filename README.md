@@ -1,23 +1,25 @@
-# DEW4SLHAv1.3
-This program computes the naturalness measures $\Delta_{EW}$ (DEW) and produces an ordered list of contributions to DEW from the one-loop and partial two-loop Higgs minimization conditions using the effective potential method and a user-provided input SLHA file from the user's choice of spectrum generator. For versions later than v1.3, the program also computes the naturalness measures $\Delta_{HS}$ and $\Delta_{BG}$ for the user-input SLHA file. This documentation is for v1.3.
+# NOTE:
+# THIS IS JUST A TEMPLATE. DEW4SLHAV1.4 IS NOT LIVE YET.
+# DEW4SLHAv1.4
+This program computes the naturalness measures $\Delta_{EW}$ (DEW) and produces an ordered list of contributions to DEW from the one-loop and partial two-loop Higgs minimization conditions using the effective potential method and a user-provided input SLHA file from the user's choice of spectrum generator. For versions later than v1.4, the program also computes the naturalness measures $\Delta_{HS}$ and $\Delta_{BG}$ for the user-input SLHA file. This documentation is for v1.4.
 
 # Installation
-There are two main options for obtaining and running DEW4SLHA. The first is perhaps the simplest: a standalone executable for DEW4SLHA, precompiled into the C language using [Pyinstaller](https://pyinstaller.org/en/stable/). Obtain the file `DEW4SLHAv1_3.tar.gz` or equivalently `DEW4SLHAv1_3.zip` from the GitHub releases (https://github.com/Dmartinez-96/DEW-Calculator/releases/tag/DEW4SLHAv1.3). Put this archive in the desired location for the DEW4SLHA program to live. 
+There are two main options for obtaining and running DEW4SLHA. The first is perhaps the simplest: a standalone executable for DEW4SLHA, precompiled into the C language using [Pyinstaller](https://pyinstaller.org/en/stable/). Obtain the file `DEW4SLHAv1_4.tar.gz` or equivalently `DEW4SLHAv1_4.zip` from the GitHub releases (https://github.com/Dmartinez-96/DEW-Calculator/releases/tag/DEW4SLHAv1.4). Put this archive in the desired location for the DEW4SLHA program to live. 
 
 **NOTE**: The DEW4SLHA routine is written nearly exclusively in Python3, specifically Python3.9.16. Installing a Python3 compiler is straightforward on most systems -- however, for the user's convenience, DEW4SLHA is packaged here and should function as a standalone executable together with its supporting source code, independent of whether a system has a Python interpreter installed or not. The tradeoff here is that the file size is rather large, as the compiler for Python is packaged into the executable here, together with all dependencies, so that the user's need for installation is minimized.  
 
 Now unpack this archive. For example, unpacking a `tar.gz` archive with an Ubuntu 22.04 terminal could entail using the command:
 
-`cd /path/containing/DEW4SLHAv1_3.tar.gz/archive/`
+`cd /path/containing/DEW4SLHAv1_4.tar.gz/archive/`
 
-`tar -xvzf DEW4SLHAv1_3.tar.gz`
+`tar -xvzf DEW4SLHAv1_4.tar.gz`
 
-`cd DEW4SLHAv1_3`
+`cd DEW4SLHAv1_4`
 
-Alternatively, if one were to just want the Python scripts for use in their own Python environment, details on packages needed are below. Instead of downloading the large executable, precompiled version, the scripts can be downloaded from [GitHub](https://github.com/Dmartinez-96/DEW-Calculator/releases/tag/DEW4SLHAv1.3) as a tarball or ZIP file from `DEW4SLHAv1_3_py.tar.gz` or `DEW4SLHAv1_3_py.zip`. Click on the type of compressed archive you want to download and download them from here.
+Alternatively, if one were to just want the Python scripts for use in their own Python environment, details on packages needed are below. Instead of downloading the large executable, precompiled version, the scripts can be downloaded from [GitHub](https://github.com/Dmartinez-96/DEW-Calculator/releases/tag/DEW4SLHAv1.4) as a tarball or ZIP file from `DEW4SLHAv1_4_py.tar.gz` or `DEW4SLHAv1_4_py.zip`. Click on the type of compressed archive you want to download and download them from here.
 
 ## Standalone executable installation (no Python required)
-This unpacked archive now contains the two methods by which DEW4SLHAv1.3 can be run. If you are running the standalone executable, installation is complete with the exception of possibly ensuring the system has a C compiler properly installed, such as `gcc`. 
+This unpacked archive now contains the two methods by which DEW4SLHAv1.4 can be run. If you are running the standalone executable, installation is complete with the exception of possibly ensuring the system has a C compiler properly installed, such as `gcc`. 
 
 ## Pythonic version installation
 If instead, you would prefer to use the functionally equivalent Python script, ensure you have Python3 installed on your system (see [the Python website](https://www.python.org/downloads/) for info on how to download and install Python for your system). It is recommended to have Python version $\geq$ 3.9.16.
@@ -34,22 +36,22 @@ Using a package manager such as `pip` (or `conda`, though some packages such as 
 
 Make sure that the Python script compressed archive you downloaded has been extracted. For example, on Ubuntu 22.04 with a `tar.gz` archive, do:
 
-`cd /path/to/where/DEW4SLHAv1_3_py.tar.gz/lives/`
+`cd /path/to/where/DEW4SLHAv1_4_py.tar.gz/lives/`
 
-`tar -xvzf DEW4SLHAv1_3_py.tar.gz`
+`tar -xvzf DEW4SLHAv1_4_py.tar.gz`
 
-`cd DEW4SLHAv1_3_py`
+`cd DEW4SLHAv1_4_py`
 
 # Startup Instructions
 
 ## Standalone executable
-After having extracted the `DEW4SLHAv1_3.tar.gz` file, open bash or a terminal and change directory into the parent folder:
+After having extracted the `DEW4SLHAv1_4.tar.gz` file, open bash or a terminal and change directory into the parent folder:
 
-`cd /path/to/DEW4SLHAv1_3/`
+`cd /path/to/DEW4SLHAv1_4/`
 
 Change directory to where the executable file lives:
 
-`cd /path/to/DEW4SLHAv1_3/exe/DEW4SLHAv1_3/`
+`cd /path/to/DEW4SLHAv1_4/exe/DEW4SLHAv1_4/`
 
 From here, the user can execute the program:
 
@@ -62,13 +64,13 @@ From here, the user can execute the program:
 **IMPORTANT:** Do not change the relative locations or names of files inside the `.../src/` directory.
 
 ## Python script
-Make sure you are in the folder `/path/to/DEW4SLHAv1_3_py/`. With the proper packages installed, you can run the file `DEW4SLHA.x.py` from your Python compiler in a terminal. For example, if your terminal command for running Python programs is '`python`', then use the following command from a terminal to use DEW4SLHAv1.3:
+Make sure you are in the folder `/path/to/DEW4SLHAv1_4_py/`. With the proper packages installed, you can run the file `DEW4SLHA.x.py` from your Python compiler in a terminal. For example, if your terminal command for running Python programs is '`python`', then use the following command from a terminal to use DEW4SLHAv1.4:
 
 `python DEW4SLHA.x.py`
 
-`DEW4SLHA.x.py` is a wrapper script that links to the relevant files inside the `.../DEW4SLHAv1_3_py/src/` directory.
+`DEW4SLHA.x.py` is a wrapper script that links to the relevant files inside the `.../DEW4SLHAv1_4_py/src/` directory.
 
-**IMPORTANT:** Do not change the relative locations or names of `DEW4SLHA.x.py` nor any of the files in the `DEW4SLHAv1_3_py/src/` directory. 
+**IMPORTANT:** Do not change the relative locations or names of `DEW4SLHA.x.py` nor any of the files in the `DEW4SLHAv1_4_py/src/` directory. 
 
 # Runtime Instructions
 
@@ -96,7 +98,7 @@ With the configuration complete and successful, the user should next see a scree
 
 ![dirinp](Readme_images/dirinp.png "DEW4SLHA prompts for SLHA file location")
 
-The path should be included as an absolute path (i.e., `/home/usr/path/to/SLHA/file` or similar), but relative paths from the `DEW4SLHA.x` executable or `DEW4SLHA.x.py` script should work fine, too (e.g., if `mySLHA` file was in the directory `.../DEW4SLHAv1_3/exe/DEW4SLHAv1_3/mySLHAfiles/`, then inputting the path "`mySLHAfiles/mySLHA`" should work if you haven't moved the executable or source files). You will know you were successful upon seeing a screen like below:
+The path should be included as an absolute path (i.e., `/home/usr/path/to/SLHA/file` or similar), but relative paths from the `DEW4SLHA.x` executable or `DEW4SLHA.x.py` script should work fine, too (e.g., if `mySLHA` file was in the directory `.../DEW4SLHAv1_4/exe/DEW4SLHAv1_4/mySLHAfiles/`, then inputting the path "`mySLHAfiles/mySLHA`" should work if you haven't moved the executable or source files). You will know you were successful upon seeing a screen like below:
 
 ![successful_config](Readme_images/Successful_SLHA_inp.png "Successfully configured DEW4SLHA")
 
